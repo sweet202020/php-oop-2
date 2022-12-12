@@ -11,9 +11,5 @@ Stampiamo delle card contenenti i dettagli dei prodotti, come immagine, titolo, 
 require __DIR__ . '/models/Product.php';
 require __DIR__ . '/models/Category.php';
 require __DIR__ . '/models/Toy.php';
-
-
-$cuccia = new Product('cuccia', 'cuccia per cani grande', 30, 'http:', new Category('cane', 'http:///777'));
-
-$osso = new Toy('lorem', '30', '20', 'cuccia', 'cuccia per cani grande', 30, 'http:', new Category('cane', 'http:///777'));
-var_dump($osso);
+require __DIR__ . '/models/Food.php';
+require __DIR__ . '/models/PetKennel.php';
