@@ -24,5 +24,14 @@ class Product
     }
 }
 
+class DogProduct extends Product
+{
+}
+
+class CatProduct extends Product
+{
+}
+$gioco = new DogProduct('gioco', 'gioco per cani grande', 50, 'http:');
+var_dump($gioco);
 $cuccia = new Product('cuccia', 'cuccia per cani grande', 30, 'http:');
 var_dump($cuccia);
