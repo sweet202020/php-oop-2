@@ -8,30 +8,8 @@ I prodotti saranno oltre al cibo, anche giochi, cucce, etc.
 Stampiamo delle card contenenti i dettagli dei prodotti, come immagine, titolo, prezzo, icona della categoria ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia).
 */
 
-class Product
-{
-    public $type;
-    public $name;
-    public $price;
-    public $image;
+require __DIR__ . '/models/Product.php';
+require __DIR__ . '/models/Category.php';
 
-    public function __construct(string $type, string $name, int $price, string $image)
-    {
-        $this->type = $type;
-        $this->name = $name;
-        $this->price = $price;
-        $this->image = $image;
-    }
-}
-
-class DogProduct extends Product
-{
-}
-
-class CatProduct extends Product
-{
-}
-$gioco = new DogProduct('gioco', 'gioco per cani grande', 50, 'http:');
-var_dump($gioco);
-$cuccia = new Product('cuccia', 'cuccia per cani grande', 30, 'http:');
+$cuccia = new Product('cuccia', 'cuccia per cani grande', 30, 'http:', new Category('cane', 'http:///777'));
 var_dump($cuccia);
